@@ -24,19 +24,26 @@ export default function Hero() {
     trackEvent('hero_cta_clicked', { action: 'email_submit', email })
 
     try {
-      const response = await fetch('/api/lead', {
+      const response = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, source: 'hero' })
       })
 
+      const data = await response.json()
+      
       if (response.ok) {
-        setMessage(t.hero.successMessage)
+        if (data.already) {
+          setMessage(t.hero.alreadySubscribedMessage)
+        } else {
+          setMessage(t.hero.successMessage)
+        }
         setEmail('')
       } else {
-        const data = await response.json()
-        if (data.error === 'already_subscribed') {
-          setMessage(t.hero.alreadySubscribedMessage)
+        if (data.code === 'VALIDATION_ERROR') {
+          setMessage('Please enter a valid email address')
+        } else if (data.code === 'RATE_LIMITED') {
+          setMessage('Too many requests. Please try again later.')
         } else {
           setMessage(t.hero.errorMessage)
         }
