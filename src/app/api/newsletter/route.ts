@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
     const listId = process.env.MAILCHIMP_AUDIENCE_ID
 
     if (!listId) {
-      throw new Error('MAILCHIMP_AUDIENCE_ID not configured')
+      throw new Error('MAILCHIMP_AUDIENCE_ID non configurato')
     }
 
     // Aggiungi l'email alla lista Mailchimp
@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
       ]
     })
 
-    console.log('Newsletter subscription successful:', {
+    console.log('Iscrizione newsletter riuscita:', {
       email,
       source,
       mailchimp_id: response.id,
@@ -55,45 +55,32 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ 
       success: true, 
-      status: 'subscribed',
-      already: false,
-      message: 'Newsletter subscription completed successfully!' 
+      message: 'Iscrizione alla newsletter completata con successo!' 
     })
 
   } catch (error: any) {
-    console.error('Newsletter subscription error:', error)
+    console.error('Errore iscrizione newsletter:', error)
 
-    // Handle specific Mailchimp errors
+    // Gestione errori specifici di Mailchimp
     if (error.response?.body?.title === 'Member Exists') {
       return NextResponse.json(
         { 
-          success: true,
-          status: 'subscribed',
-          already: true,
-          message: 'This email address is already subscribed to our newsletter'
-        },
-        { status: 200 }
-      )
-    }
-
-    if (error instanceof z.ZodError) {
-      return NextResponse.json(
-        { 
-          success: false,
-          error: 'Invalid data', 
-          code: 'VALIDATION_ERROR',
-          details: error.errors 
+          error: 'Questo indirizzo email è già iscritto alla newsletter',
+          code: 'ALREADY_SUBSCRIBED'
         },
         { status: 400 }
       )
     }
 
+    if (error instanceof z.ZodError) {
+      return NextResponse.json(
+        { error: 'Dati non validi', details: error.errors },
+        { status: 400 }
+      )
+    }
+
     return NextResponse.json(
-      { 
-        success: false,
-        error: 'Error during subscription. Please try again later.',
-        code: 'INTERNAL_ERROR'
-      },
+      { error: 'Errore durante l\'iscrizione. Riprova più tardi.' },
       { status: 500 }
     )
   }
@@ -101,7 +88,7 @@ export async function POST(request: NextRequest) {
 
 export async function GET() {
   return NextResponse.json(
-    { error: 'Method not allowed' },
+    { error: 'Metodo non consentito' },
     { status: 405 }
   )
 }
