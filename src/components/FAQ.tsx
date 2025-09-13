@@ -81,15 +81,11 @@ export default function FAQ() {
           <p className="text-gray-600 mb-6">
             {t.faq.stillHaveQuestions}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              className="bg-primary-500 text-white px-8 py-3 rounded-xl font-semibold hover:bg-primary-600 transition-colors"
-              onClick={() => trackEvent('faq_contact_clicked', { action: 'book_demo' })}
-            >
-              {t.faq.bookDemo}
-            </button>
+          <div className="flex justify-center">
             <a 
-              href="mailto:support@beautysoft.app"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=beautysoftapp@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="border border-gray-300 text-gray-700 px-8 py-3 rounded-xl font-semibold hover:bg-gray-50 transition-colors inline-block text-center"
               onClick={() => trackEvent('faq_contact_clicked', { action: 'email_support' })}
             >

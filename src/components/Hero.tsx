@@ -4,11 +4,13 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { useLanguage } from '@/lib/language-context'
-import { ArrowRight, Sparkles, Star } from 'lucide-react'
+import { ArrowRight, Sparkles } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { trackEvent } from '@/lib/utils'
 import HeroPhoneMockup from './HeroPhoneMockup'
 import HeroFloaters from './HeroFloaters'
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Hero() {
   const { t } = useLanguage()
@@ -61,7 +63,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-white via-gray-50 to-accent-50 overflow-hidden">
+    <section id="hero" className="relative min-h-screen bg-gradient-to-br from-white via-gray-50 to-accent-50 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 right-20 w-72 h-72 bg-primary-500/5 rounded-full blur-3xl"></div>
@@ -150,41 +152,46 @@ export default function Hero() {
               </motion.div>
             )}
 
-            {/* Rating */}
+            {/* Store Badges and Legal Links */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
-              className="flex items-center gap-2 text-sm text-gray-600"
+              className="mt-6"
             >
-              <div className="flex gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                ))}
+              {/* Store badges row (Apple first, same size) */}
+              <div className="flex items-center gap-3">
+                <Link
+                  href="https://apps.apple.com/app/id-REPLACE"
+                  aria-label="Scarica su App Store"
+                  className="inline-flex rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all duration-200 hover:scale-105 hover:shadow-lg"
+                >
+                  <Image
+                    src="/download_apple.svg"
+                    alt="Download on the App Store"
+                    width={180}
+                    height={54}
+                    priority
+                    className="h-[54px] w-[180px] object-contain"
+                  />
+                </Link>
+                <Link
+                  href="https://play.google.com/store/apps/details?id=REPLACE"
+                  aria-label="Scarica su Google Play"
+                  className="inline-flex rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all duration-200 hover:scale-105 hover:shadow-lg"
+                >
+                  <Image
+                    src="/download_google.png"
+                    alt="Get it on Google Play"
+                    width={180}
+                    height={54}
+                    className="h-[54px] w-[180px] object-contain"
+                  />
+                </Link>
               </div>
-              <span className="font-medium">4.9/5</span>
-              <span>{t.hero.rating}</span>
+
+
             </motion.div>
-
-            {/* Micro Trust */}
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.7, duration: 0.6 }}
-              className="text-sm text-gray-500 max-w-md"
-            >
-              {t.hero.microTrust}
-            </motion.p>
-
-            {/* No Credit Card */}
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-              className="text-xs text-gray-400"
-            >
-              {t.hero.noCreditCard}
-            </motion.p>
           </motion.div>
 
           {/* Right Column - Phone Mockup */}

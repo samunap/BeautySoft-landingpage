@@ -11,14 +11,14 @@ export const translations = {
     
     // Hero Section
     hero: {
-      badge: "Disponibile su iOS e Android",
-      headline: "Il Futuro dei Saloni di Bellezza",
-      subline: "Ora visualizza tutte le tue prenotazioni, programmi del personale e ricavi in un unico posto! Registrati e ottieni fino al 95% di No-Show in Meno",
-      emailPlaceholder: "Il tuo indirizzo email aziendale",
+      badge: "App iOS • Android",
+      headline: "La Piattaforma Smart per far Crescere il tuo Salone",
+      subline: "Agenda smart, prenotazioni online, gestionale completo. Riduci i no-show, riempi l'agenda, aumenta i ricavi.",
+      emailPlaceholder: "La tua email",
       primaryCta: "Inizia Ora",
       secondaryCta: "Prenota una Demo",
-      microTrust: "Usato da saloni in crescita in tutta Europa • Annulla in qualsiasi momento",
-      noCreditCard: "*Nessuna garanzia personale o controllo del credito personale richiesto.",
+      microTrust: "Il miglior software sul mercato • Disdici quando vuoi",
+      noCreditCard: "*Nessuna carta di credito richiesta.",
       rating: "da 500+ saloni",
       successMessage: "Grazie! Ti sei iscritto alla newsletter con successo!",
       errorMessage: "Si è verificato un errore. Riprova più tardi.",
@@ -29,53 +29,53 @@ export const translations = {
     // How It Works
     howItWorks: {
       title: "Come Funziona BeautySoft",
-      subtitle: "Dalla scoperta alla gestione, abbiamo semplificato l'intera esperienza di prenotazione beauty",
+      subtitle: "Dalla ricerca alla gestione: tutto fluido, tutto in un'unica piattaforma.",
       steps: [
         {
           title: "Scopri",
-          description: "I clienti ti trovano sulla mappa o tramite ricerca, vedono la disponibilità reale e i profili del personale."
+          description: "Fatti trovare e mostra il meglio del tuo salone. Profili chiari, disponibilità sempre aggiornata e visibilità immediata per i clienti."
         },
         {
           title: "Prenota", 
-          description: "Scegli servizio, orario e membro del personale preferito. Conferma istantanea con sincronizzazione calendario."
+          description: "Servizi, orari e staff a portata di click. Conferme istantanee e calendario sincronizzato: zero attese, solo efficienza."
         },
         {
           title: "Gestisci",
-          description: "I proprietari tengono traccia di tutto, il personale gestisce la propria giornata, i clienti ricevono promemoria e ricevute."
+          description: "Monitora attività, ricavi e performance del team in tempo reale. Con BeautySoft tieni tutto sotto controllo, ovunque tu sia."
         }
       ]
     },
 
     // Roles
     roles: {
-      title: "Costruito per Tutti nel Tuo Salone",
-      subtitle: "Che tu sia un proprietario che gestisce l'attività, personale che serve i clienti, o clienti che prenotano appuntamenti—BeautySoft ti copre.",
+      title: "Creato per Proprietari, Staff e Clienti",
+      subtitle: "Che tu gestisca il salone, faccia parte del team o voglia semplicemente prenotare, BeautySoft rende tutto semplice, veloce e connesso.",
       owner: {
-        title: "I Proprietari gestiscono tutto in un posto",
+        title: "Gestisci il tuo business in un unico posto",
         bullets: [
           "Calendario intelligente con programmazione del personale",
-          "Riduci i no-show con depositi e promemoria", 
-          "Ricavi dal vivo, utilizzo e recensioni"
+          "Riduzione dei no-show con depositi e promemoria automatici", 
+          "Report in tempo reale su ricavi, utilizzo e recensioni"
         ],
         cta: "Inizia Gratis"
       },
       staff: {
-        title: "Il Personale gestisce la propria giornata senza sforzo",
+        title: "Concentrati sui clienti, non sulla burocrazia",
         bullets: [
-          "Vista oggi e programma personale",
-          "Richieste di ferie e scambi di turni",
-          "Follow-up automatici per aumentare le valutazioni"
+          "Agenda personale sempre aggiornata",
+          "Notifiche chiare su prenotazioni e modifiche",
+          "Maggiori opportunità grazie a recensioni e feedback"
         ],
-        cta: "Invita il tuo proprietario"
+        cta: "Inizia ora!"
       },
       customers: {
-        title: "I Clienti prenotano in 10 secondi",
+        title: "Prenotare non è mai stato così facile",
         bullets: [
-          "Ricerca sulla mappa e professionisti preferiti",
-          "Conferma istantanea e promemoria",
-          "Pagamenti senza contanti e ricevute"
+          "Servizi, orari e disponibilità in pochi click",
+          "Conferma istantanea e promemoria automatici",
+          "Esperienza fluida e sicura, dal primo accesso al pagamento"
         ],
-        cta: "Unisciti alla lista d'attesa"
+        cta: "Inizia ora!"
       }
     },
 
@@ -142,19 +142,19 @@ export const translations = {
       subtitle: "Guarda cosa dicono proprietari di saloni, personale e clienti su BeautySoft",
       items: [
         {
-          quote: "I no-show sono diminuiti del 35% nel primo mese.",
+          quote: "Con BeautySoft ho ridotto i no-show del 40%, la mia agenda ora è sempre piena",
           author: "Marco",
           role: "Barbiere",
           location: "Milano"
         },
         {
-          quote: "Finalmente vedo chi è redditizio—e quando.",
-          author: "Anna", 
+          quote: "Finalmente un gestionale che mi mostra subito i ricavi e chi sono i miei clienti migliori",
+          author: "Dario", 
           role: "Proprietaria Salone",
-          location: "Praga"
+          location: "Crotone"
         },
         {
-          quote: "Prenotare richiede meno di un minuto.",
+          quote: "Prenotazioni online semplici in meno di un minuto",
           author: "Lucia",
           role: "Cliente",
           location: "Roma"
@@ -169,36 +169,36 @@ export const translations = {
       subtitle: "Tutto quello che devi sapere su BeautySoft",
       items: [
         {
-          question: "Ho bisogno di un sito web?",
-          answer: "No, ottieni una pagina di prenotazione automaticamente. BeautySoft fornisce una pagina di prenotazione professionale che i tuoi clienti possono usare direttamente."
+          question: "Cos'è BeautySoft?",
+          answer: "BeautySoft è una piattaforma digitale pensata per saloni di bellezza, parrucchieri ed estetiste. Ti permette di gestire appuntamenti, clienti, personale e ricavi in un unico posto, con un'interfaccia semplice e intuitiva."
         },
         {
-          question: "Posso importare dati da un altro sistema?",
-          answer: "Sì, tramite CSV o supporto all'onboarding. Il nostro team ti aiuterà a migrare i tuoi dati clienti esistenti e gli appuntamenti senza problemi."
+          question: "Devo avere competenze tecniche per usarlo?",
+          answer: "No. BeautySoft è progettato per essere immediato e facile da usare. Bastano pochi minuti per iniziare a gestire prenotazioni e agenda in autonomia, senza bisogno di formazione tecnica."
         },
         {
-          question: "Che dire dei no-show?",
-          answer: "Depositi e promemoria automatici integrati. Il nostro sistema invia automaticamente promemoria e può richiedere depositi per ridurre i no-show fino al 35%."
+          question: "Come funziona la prenotazione da parte dei clienti?",
+          answer: "I tuoi clienti possono prenotare direttamente dall'applicazione. Una volta selezionato il salone, possono scegliere il servizo, l'orario e il professionista. La conferma è immediata e riceveranno anche promemoria automatici."
         },
         {
-          question: "C'è un'app mobile?",
-          answer: "Sì, app iOS e Android per proprietari, personale e clienti. Tutti ottengono gli strumenti di cui hanno bisogno sul loro dispositivo preferito."
+          question: "Posso gestire più collaboratori o sedi?",
+          answer: "Si. BeautySoft ti permette di aggiungere facilmente collaboratori, assegnare disponibilità e visualizzare la loro agenda. Se gestisci più sedi, puoi gestire tutto dall'applicazione."
         },
         {
-          question: "Il personale può avere login separati?",
-          answer: "Sì, con permessi basati sui ruoli. Il personale può gestire i propri programmi, richiedere ferie e visualizzare i propri guadagni mentre i proprietari mantengono il controllo completo."
+          question: "E' possibile provare BeautySoft gratuitamente?",
+          answer: "Certo! Puoi iniziare con una prova gratuita senza impegno. Avrai accesso a tutte le funzioni principali per testare l'efficacia della piattaforma nel tuo salone."
         },
         {
-          question: "BeautySoft è conforme al GDPR?",
-          answer: "Sì, opzioni di hosting UE disponibili. Prendiamo sul serio la protezione dei dati e offriamo hosting dati europeo per garantire la piena conformità GDPR."
+          question: "Posso monitorare statistiche e ricavi?",
+          answer: "Si. Con BeautySoft avrai una dashboard chiara con indicatori chiave: fatturato, tasso riempimento, no-show, scontrino medio e tanto altro..."
         },
         {
           question: "Quanto costa?",
-          answer: "I piani partono da €29/mese per piccoli saloni. Tutti i piani includono una prova gratuita di 14 giorni senza carta di credito richiesta."
+          answer: "BeautySoft offre diversi piani in base alle tue esigenze e alle funzionalità richieste. Contattaci per ottenere maggiori dettagli."
         },
         {
-          question: "Posso annullare in qualsiasi momento?",
-          answer: "Sì, nessun contratto a lungo termine. Puoi aggiornare, declassare o annullare il tuo abbonamento in qualsiasi momento dalle impostazioni del tuo account."
+          question: "I miei dati e quelli dei clienti sono al sicuro?",
+          answer: "Assolutamente si. Utilizziamo protocolli di sicurezza avanzati e server affidabili per garantire la protezione dei tuoi dati e il rispetto della privacy dei tuoi clienti."
         }
       ],
       stillHaveQuestions: "Hai ancora domande? Siamo qui per aiutarti.",
@@ -267,10 +267,10 @@ export const translations = {
     logoWall: {
       trustedBy: "Fidato dai saloni in crescita in tutta Europa",
       stats: [
-        { label: "Saloni Attivi", value: "500+" },
-        { label: "Prenotazioni Fatte", value: "50K+" },
-        { label: "Riduzione No-Show", value: "35%" },
-        { label: "Valutazione Cliente", value: "4.9/5" }
+        { label: "Fatturato medio", value: "+28%" },
+        { label: "Tasso di Riempimento Agenda", value: "+22%" },
+        { label: "Riduzione No-Show", value: "+35%" },
+        { label: "Aumento Scontrino Medio", value: "+15%" }
       ]
     }
   },
@@ -305,53 +305,53 @@ export const translations = {
     // How It Works
     howItWorks: {
       title: "How BeautySoft Works",
-      subtitle: "From discovery to management, we've streamlined the entire beauty booking experience",
+      subtitle: "From discovery to management—everything is seamless, all in one platform.",
       steps: [
         {
           title: "Discover",
-          description: "Customers find you on the map or through search, see real availability and staff profiles."
+          description: "Get found and showcase the best of your salon. Clear profiles, always up-to-date availability, and instant visibility for customers."
         },
         {
           title: "Book",
-          description: "Choose service, time, and preferred staff member. Instant confirmation with calendar sync."
+          description: "Services, times, and staff at your fingertips. Instant confirmations and a synced calendar—no waiting, just efficiency."
         },
         {
-          title: "Manage", 
-          description: "Owners track everything, staff manage their day, customers get reminders and receipts."
+          title: "Manage",
+          description: "Monitor activity, revenue, and team performance in real time. With BeautySoft, keep everything under control wherever you are."
         }
       ]
     },
 
     // Roles
     roles: {
-      title: "Built for Everyone in Your Shop",
-      subtitle: "Whether you're an owner managing the business, staff serving clients, or customers booking appointments—BeautySoft has you covered.",
+      title: "Built for Owners, Staff, and Customers",
+      subtitle: "Whether you manage the salon, are part of the team, or simply want to book, BeautySoft makes everything simple, fast, and connected.",
       owner: {
-        title: "Owners run everything in one place",
+        title: "Run your business in one place",
         bullets: [
           "Smart calendar with staff scheduling",
-          "Reduce no-shows with deposits & reminders",
-          "Live revenue, utilization & reviews"
+          "Reduce no-shows with deposits and automatic reminders",
+          "Real-time reports on revenue, utilization, and reviews"
         ],
         cta: "Start Free"
       },
       staff: {
-        title: "Staff manage their day effortlessly", 
+        title: "Focus on clients, not paperwork", 
         bullets: [
-          "Today view & personal schedule",
-          "Time-off requests & shift swaps",
-          "Auto follow-ups to grow ratings"
+          "Always up-to-date personal schedule",
+          "Clear notifications for bookings and changes",
+          "More opportunities thanks to reviews and feedback"
         ],
-        cta: "Invite your owner"
+        cta: "Start Now!"
       },
       customers: {
-        title: "Customers book in 10 seconds",
+        title: "Booking has never been easier",
         bullets: [
-          "Map search & favorite pros",
-          "Instant confirmation & reminders", 
-          "Cashless payments & receipts"
+          "Services, times, and availability in a few clicks",
+          "Instant confirmation and automatic reminders", 
+          "A smooth, secure experience—from first login to payment"
         ],
-        cta: "Join the waitlist"
+        cta: "Start Now!"
       }
     },
 
@@ -541,12 +541,12 @@ export const translations = {
 
     // Logo Wall
     logoWall: {
-      trustedBy: "Scelto dai saloni in crescita in tutta Europa",
+      trustedBy: "Trusted by growing salons across Europe",
       stats: [
-        { label: "Active Salons", value: "500+" },
-        { label: "Bookings Made", value: "50K+" },
-        { label: "No-show Reduction", value: "35%" },
-        { label: "Customer Rating", value: "4.9/5" }
+        { label: "Increased Average Revenue", value: "+28%" },
+        { label: "Higher Booking Rate", value: "+22%" },
+        { label: "No-show Reduction", value: "-32%" },
+        { label: "Increased Average Ticket Value", value: "+15%" }
       ]
     }
   }

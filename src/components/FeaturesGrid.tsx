@@ -11,7 +11,7 @@ import {
   BarChart3 
 } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { trackEvent } from '@/lib/utils'
+import NewsletterCTA from './NewsletterCTA'
 
 const iconMap = {
   map: Map,
@@ -81,36 +81,8 @@ export default function FeaturesGrid() {
           })}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-primary-500 to-accent-500 rounded-2xl p-8 text-white"
-          >
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              {t.features.ctaTitle}
-            </h3>
-            <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-              {t.features.ctaSubtitle}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                className="bg-white text-primary-500 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
-                onClick={() => trackEvent('features_cta_clicked', { action: 'start_free' })}
-              >
-                {t.features.ctaStartFree}
-              </button>
-              <button 
-                className="border border-white/30 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white/10 transition-colors"
-                onClick={() => trackEvent('features_cta_clicked', { action: 'view_demo' })}
-              >
-                {t.features.ctaViewDemo}
-              </button>
-            </div>
-          </motion.div>
-        </div>
+        {/* Newsletter CTA Section */}
+        <NewsletterCTA />
       </div>
     </section>
   )

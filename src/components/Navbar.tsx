@@ -13,6 +13,11 @@ export default function Navbar() {
 
   const handleCTAClick = (action: string) => {
     trackEvent('navbar_cta_clicked', { action, position: 'navbar' })
+    // Navigate to hero section
+    const heroSection = document.getElementById('hero')
+    if (heroSection) {
+      heroSection.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   return (
@@ -60,11 +65,13 @@ export default function Navbar() {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button
-              onClick={() => handleCTAClick('get_started')}
-            >
-              {t.nav.getStarted}
-            </Button>
+            <a href="#hero">
+              <Button
+                onClick={() => handleCTAClick('get_started')}
+              >
+                {t.nav.getStarted}
+              </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -114,12 +121,17 @@ export default function Navbar() {
               </a>
               <div className="pt-4 pb-3 border-t border-gray-100">
                 <div className="flex flex-col space-y-2">
-                  <Button
-                    className="justify-start"
-                    onClick={() => handleCTAClick('get_started')}
-                  >
-                    {t.nav.getStarted}
-                  </Button>
+                  <a href="#hero">
+                    <Button
+                      className="justify-start"
+                      onClick={() => {
+                        handleCTAClick('get_started')
+                        setIsOpen(false)
+                      }}
+                    >
+                      {t.nav.getStarted}
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>

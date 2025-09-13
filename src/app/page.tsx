@@ -8,7 +8,6 @@ import ScreensCarousel from '@/components/ScreensCarousel'
 // import PricingTable from '@/components/PricingTable'
 import Testimonials from '@/components/Testimonials'
 import FAQ from '@/components/FAQ'
-import FinalCTA from '@/components/FinalCTA'
 import Footer from '@/components/Footer'
 
 export default function HomePage() {
@@ -24,7 +23,6 @@ export default function HomePage() {
       {/* <PricingTable /> */}
       <Testimonials />
       <FAQ />
-      <FinalCTA />
       <Footer />
     </main>
   )

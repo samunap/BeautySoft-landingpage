@@ -1,26 +1,21 @@
 'use client'
 
-import { howItWorks } from '@/content/site'
 import { useLanguage } from '@/lib/language-context'
-import { Card, CardContent } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
+import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
+import { Search, CalendarCheck, Settings } from 'lucide-react'
 
-const screenshots = [
+const stepIcons = [
   {
-    src: '/mappa.png',
-    alt: 'Schermata mappa',
+    icon: Search,
     label: 'Scopri'
   },
   {
-    src: '/booking.png',
-    alt: 'Schermata prenotazione',
+    icon: CalendarCheck,
     label: 'Prenota'
   },
   {
-    src: '/management.png',
-    alt: 'Schermata gestione',
+    icon: Settings,
     label: 'Gestisci'
   }
 ]
@@ -40,9 +35,10 @@ export default function HowItWorks() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {t.howItWorks.steps.map((step, index) => {
-            const screenshot = screenshots[index]
+            const stepIcon = stepIcons[index]
+            const IconComponent = stepIcon.icon
             
             return (
               <motion.div
@@ -54,39 +50,21 @@ export default function HowItWorks() {
                 className="group"
               >
                 <Card 
-                  className="overflow-hidden border-muted hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                  className="rounded-2xl border bg-background/60 shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:border-primary/30 transition-all duration-300"
                   aria-label={`Passo ${index + 1}: ${step.title}`}
                 >
-                  <CardContent className="p-6">
-                    {/* Step Label Badge */}
-                    <div className="mb-4">
-                      <Badge 
-                        variant="secondary" 
-                        className="rounded-full px-3 py-1 text-sm bg-primary-500/10 text-primary-500 border-0"
-                      >
-                        {screenshot.label}
-                      </Badge>
+                  <CardHeader className="pb-4">
+                    {/* Icon Badge */}
+                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary/15 transition-colors">
+                      <IconComponent className="h-6 w-6" aria-hidden="true" />
                     </div>
-
-                    {/* Screenshot */}
-                    <div className="aspect-[16/10] mb-6 overflow-hidden rounded-xl bg-gray-100">
-                      <Image
-                        src={screenshot.src}
-                        alt={screenshot.alt}
-                        width={400}
-                        height={250}
-                        priority={false}
-                        loading="lazy"
-                        sizes="(max-width: 1024px) 100vw, 33vw"
-                        className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-                      />
-                    </div>
-
+                  </CardHeader>
+                  <CardContent className="pt-0">
                     {/* Content */}
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    <h3 className="text-xl font-semibold mb-3">
                       {step.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed">
                       {step.description}
                     </p>
                   </CardContent>
