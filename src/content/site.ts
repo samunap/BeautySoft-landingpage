@@ -178,20 +178,21 @@ export const appScreens = [
 
 export const copy = {
   hero: {
-    badge: "Available on iOS & Android",
-    headline: "The Operating System for Barbers & Beauty Studios",
-    subline: "BeautySoft lets owners run the whole shop, staff manage their day, and customers book in seconds—from one simple app.",
-    primaryCta: "Start Free",
-    secondaryCta: "Book a Demo",
-    microTrust: "Used by growing salons across EU • Cancel anytime",
-    emailPlaceholder: "Enter your business email"
+    badge: "Disponibile su iOS & Android",
+    headline: "Il Software per Parrucchieri e Saloni di Bellezza",
+    subline: "Con BeautySoft i titolari gestiscono l’intero salone, lo staff organizza al meglio le giornate e i clienti prenotano in pochi secondi - tutto da un’unica app semplice e intuitiva.",
+    primaryCta: "Inizia la Prova Gratuita",
+    secondaryCta: "Richiedi una Demo",
+    microTrust: "Scelto da saloni in crescita in tutta Europa • Disdici quando vuoi",
+    emailPlaceholder: "Inserisci l’email del tuo salone"
   },
   meta: {
-    title: "BeautySoft — Bookings, Calendar & Growth for Barbers and Salons",
-    description: "Run your shop, delight clients, and grow revenue with BeautySoft's all-in-one app for owners, staff, and customers.",
-    ogImage: "/og.png"
+    title: "BeautySoft - Prenotazioni, Calendario & Crescita per Parrucchieri e Saloni",
+    description: "BeautySoft è una suite completa per parrucchieri e saloni di bellezza che ti aiuta a gestire il tuo salone, fidelizzare i clienti e aumentare i ricavi. Con BeautySoft, i titolari possono gestire l’intero salone, lo staff può organizzare le giornate e i clienti possono prenotare in pochi secondi - tutto da un’unica app semplice e intuitiva.",
+    ogImage: "/logo.png"
   }
 };
+
 
 // Color classes for consistent theming
 export const colors = {
