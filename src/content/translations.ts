@@ -263,6 +263,15 @@ export const translations = {
       }
     },
 
+    // Screens Carousel
+    screens: {
+      map: "Mappa",
+      bookings: "Prenotazioni", 
+      dashboard: "Analitiche",
+      analytics: "Analitiche",
+      management: "Gestione sedi"
+    },
+
     // Logo Wall
     logoWall: {
       trustedBy: "Sviluppato con le più recenti tecnologie",
@@ -433,7 +442,7 @@ export const translations = {
           quote: "Booking takes less than a minute, truly an exceptional app!",
           author: "Alexandra",
           role: "Customer",
-          location: "Rome"
+          location: "Cosenza"
         }
       ],
       overallRating: "reviews"
@@ -537,6 +546,15 @@ export const translations = {
         italian: "Italiano",
         english: "English"
       }
+    },
+
+    // Screens Carousel
+    screens: {
+      map: "Map",
+      bookings: "Bookings",
+      dashboard: "Dashboard", 
+      analytics: "Analytics",
+      management: "Management"
     },
 
     // Logo Wall

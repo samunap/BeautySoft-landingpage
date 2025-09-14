@@ -15,8 +15,20 @@ export default function ScreensCarousel() {
       "/management.png",
       "/gestione_sedi.png",
     ];
+    
+    // Map screen names to translation keys
+    const screenNameMap: { [key: string]: keyof typeof t.screens } = {
+      "Mappa": "map",
+      "Prenotazioni": "bookings",
+      "Staff Dashboard": "dashboard",
+      "Analitiche": "analytics",
+      "Gestione sedi": "management"
+    };
+    
+    const translationKey = screenNameMap[screen.name] || "map";
+    
     return {
-      name: screen.name,
+      name: t.screens[translationKey],
       image: imageMap[index] || "/mappa.png",
       alt: screen.alt,
     };
