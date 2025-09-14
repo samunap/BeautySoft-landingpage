@@ -53,47 +53,49 @@ export default function RoleTabs() {
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex flex-col sm:flex-row justify-center mb-12">
-          <div className="inline-flex bg-gray-100 rounded-2xl p-1">
-            <button
-              onClick={() => handleTabClick('owner')}
-              className={`
-                relative px-6 py-3 rounded-xl font-medium transition-all flex items-center gap-2
-                ${activeTab === 'owner' 
-                  ? 'bg-white text-primary-500 shadow-sm' 
-                  : 'text-gray-600 hover:text-primary-500'
-                }
-              `}
-            >
-              <Briefcase className="h-4 w-4" />
-              <span>Proprietari</span>
-            </button>
-            <button
-              onClick={() => handleTabClick('staff')}
-              className={`
-                relative px-6 py-3 rounded-xl font-medium transition-all flex items-center gap-2
-                ${activeTab === 'staff' 
-                  ? 'bg-white text-primary-500 shadow-sm' 
-                  : 'text-gray-600 hover:text-primary-500'
-                }
-              `}
-            >
-              <Users className="h-4 w-4" />
-              <span>Staff</span>
-            </button>
-            <button
-              onClick={() => handleTabClick('customers')}
-              className={`
-                relative px-6 py-3 rounded-xl font-medium transition-all flex items-center gap-2
-                ${activeTab === 'customers' 
-                  ? 'bg-white text-primary-500 shadow-sm' 
-                  : 'text-gray-600 hover:text-primary-500'
-                }
-              `}
-            >
-              <Heart className="h-4 w-4" />
-              <span>Clienti</span>
-            </button>
+        <div className="flex justify-center mb-12 px-4">
+          <div className="w-full max-w-md sm:max-w-lg bg-gray-100 rounded-2xl p-1 overflow-hidden">
+            <div className="grid grid-cols-3 gap-1">
+              <button
+                onClick={() => handleTabClick('owner')}
+                className={`
+                  relative px-2 sm:px-4 py-3 rounded-xl font-medium transition-all flex items-center justify-center gap-1 sm:gap-2 min-w-0
+                  ${activeTab === 'owner' 
+                    ? 'bg-white text-primary-500 shadow-sm' 
+                    : 'text-gray-600 hover:text-primary-500'
+                  }
+                `}
+              >
+                <Briefcase className="h-4 w-4 flex-shrink-0" />
+                <span className="text-sm sm:text-base truncate">Proprietari</span>
+              </button>
+              <button
+                onClick={() => handleTabClick('staff')}
+                className={`
+                  relative px-2 sm:px-4 py-3 rounded-xl font-medium transition-all flex items-center justify-center gap-1 sm:gap-2 min-w-0
+                  ${activeTab === 'staff' 
+                    ? 'bg-white text-primary-500 shadow-sm' 
+                    : 'text-gray-600 hover:text-primary-500'
+                  }
+                `}
+              >
+                <Users className="h-4 w-4 flex-shrink-0" />
+                <span className="text-sm sm:text-base truncate">Staff</span>
+              </button>
+              <button
+                onClick={() => handleTabClick('customers')}
+                className={`
+                  relative px-2 sm:px-4 py-3 rounded-xl font-medium transition-all flex items-center justify-center gap-1 sm:gap-2 min-w-0
+                  ${activeTab === 'customers' 
+                    ? 'bg-white text-primary-500 shadow-sm' 
+                    : 'text-gray-600 hover:text-primary-500'
+                  }
+                `}
+              >
+                <Heart className="h-4 w-4 flex-shrink-0" />
+                <span className="text-sm sm:text-base truncate">Clienti</span>
+              </button>
+            </div>
           </div>
         </div>
 

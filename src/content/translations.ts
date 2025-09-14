@@ -154,10 +154,10 @@ export const translations = {
           location: "Crotone"
         },
         {
-          quote: "Prenotazioni online semplici in meno di un minuto",
-          author: "Lucia",
+          quote: "Prenotazioni online semplici in meno di un minuto, veramente un'app eccezionale!",
+          author: "Alexandra",
           role: "Cliente",
-          location: "Roma"
+          location: "Cosenza"
         }
       ],
       overallRating: "recensioni"
@@ -430,8 +430,8 @@ export const translations = {
           location: "Crotone"
         },
         {
-          quote: "Booking takes less than a minute.",
-          author: "Lucia",
+          quote: "Booking takes less than a minute, truly an exceptional app!",
+          author: "Alexandra",
           role: "Customer",
           location: "Rome"
         }

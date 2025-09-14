@@ -91,10 +91,10 @@ export const testimonials = [
   },
   {
     quote: "Booking takes less than a minute.",
-    author: "Lucia",
+    author: "Alexandra",
     role: "Customer",
-    location: "Rome",
-    avatar: "/avatars/lucia.jpg"
+    location: "Cosenza",
+    avatar: "/avatars/alexandra.jpg"
   }
 ];
 
