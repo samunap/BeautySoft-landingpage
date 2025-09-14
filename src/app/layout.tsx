@@ -3,6 +3,7 @@ import { Lexend } from "next/font/google";
 import "./globals.css";
 import { copy } from "@/content/site";
 import { LanguageProvider } from "@/lib/language-context";
+import { Analytics } from "@vercel/analytics/next";
 
 const lexend = Lexend({ subsets: ["latin"] });
 
