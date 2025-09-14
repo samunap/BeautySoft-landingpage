@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Lexend } from "next/font/google";
 import "./globals.css";
 import { copy } from "@/content/site";
 import { LanguageProvider } from "@/lib/language-context";
 
-const inter = Inter({ subsets: ["latin"] });
+const lexend = Lexend({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: copy.meta.title,
@@ -76,9 +76,9 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="theme-color" content="#6B5BFF" />
+        <link rel="icon" href="/logo.png" />
+        <link rel="apple-touch-icon" href="/logo.png" />
+        <meta name="theme-color" content="#287ea0" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=5"
@@ -123,7 +123,7 @@ export default function RootLayout({
           </>
         )}
       </head>
-      <body className={inter.className} suppressHydrationWarning={true}>
+      <body className={lexend.className} suppressHydrationWarning={true}>
         <LanguageProvider>{children}</LanguageProvider>
 
         {/* Vercel Analytics */}
