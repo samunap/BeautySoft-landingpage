@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
-import { stats } from '@/content/site'
-import { useLanguage } from '@/lib/language-context'
+import { stats } from "@/content/site";
+import { useLanguage } from "@/lib/language-context";
 
 export default function LogoWall() {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
   return (
     <section className="py-16 bg-white border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-6">
@@ -23,17 +23,16 @@ export default function LogoWall() {
         </div>
 
         {/* Trust Logos */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <p className="text-sm text-gray-600 mb-8">{t.logoWall.trustedBy}</p>
           <div className="flex justify-center items-center space-x-8 md:space-x-12 opacity-60">
-            {/* Placeholder logos - replace with actual brand logos */}
             <div className="font-semibold text-lg text-gray-400">Fabio Curcio</div>
             <div className="font-semibold text-lg text-gray-400">Forbes</div>
             <div className="font-semibold text-lg text-gray-400">Fabrizio Vaccaro</div>
             <div className="font-semibold text-lg text-gray-400">Beauty Today</div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
-  )
+  );
 }

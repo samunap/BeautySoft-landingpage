@@ -169,11 +169,11 @@ export const brands = [
 ];
 
 export const appScreens = [
-  { name: "Map Search", image: "/screens/map.png", alt: "Map-based salon discovery" },
-  { name: "Booking Flow", image: "/screens/booking.png", alt: "Quick booking interface" },
-  { name: "Staff Dashboard", image: "/screens/staff.png", alt: "Staff day view and schedule" },
-  { name: "Owner Analytics", image: "/screens/analytics.png", alt: "Revenue and performance analytics" },
-  { name: "Time-off Requests", image: "/screens/timeoff.png", alt: "Staff time-off management" },
+  { name: "Mappa", image: "/screens/map.png", alt: "Mappa selezione sede" },
+  { name: "Prenotazioni", image: "/screens/booking.png", alt: "Prenotazioni" },
+  { name: "Staff Dashboard", image: "/screens/staff.png", alt: "Staff Dashboard" },
+  { name: "Analitiche", image: "/screens/analytics.png", alt: "Analitiche e statistiche" },
+  { name: "Gestione sedi", image: "/screens/timeoff.png", alt: "Gestione sedi" },
 ];
 
 export const copy = {

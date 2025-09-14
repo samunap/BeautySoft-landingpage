@@ -19,12 +19,14 @@ export default function IphoneMockupCarousel({ slides }: IphoneMockupCarouselPro
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
   const [isHovered, setIsHovered] = useState(false)
+  const [direction, setDirection] = useState(1) // 1 for forward, -1 for backward
 
   // Auto-play functionality with hover pause
   useEffect(() => {
     if (!isAutoPlaying || isHovered) return
 
     const interval = setInterval(() => {
+      setDirection(1)
       setCurrentIndex((prev) => (prev + 1) % slides.length)
     }, 5000)
 
@@ -32,6 +34,8 @@ export default function IphoneMockupCarousel({ slides }: IphoneMockupCarouselPro
   }, [isAutoPlaying, isHovered, slides.length])
 
   const goToSlide = (index: number) => {
+    const newDirection = index > currentIndex ? 1 : -1
+    setDirection(newDirection)
     setCurrentIndex(index)
     setIsAutoPlaying(false)
     // Resume auto-play after 10 seconds
@@ -39,12 +43,14 @@ export default function IphoneMockupCarousel({ slides }: IphoneMockupCarouselPro
   }
 
   const goToPrevious = () => {
+    setDirection(-1)
     setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length)
     setIsAutoPlaying(false)
     setTimeout(() => setIsAutoPlaying(true), 10000)
   }
 
   const goToNext = () => {
+    setDirection(1)
     setCurrentIndex((prev) => (prev + 1) % slides.length)
     setIsAutoPlaying(false)
     setTimeout(() => setIsAutoPlaying(true), 10000)
@@ -66,28 +72,33 @@ export default function IphoneMockupCarousel({ slides }: IphoneMockupCarouselPro
         
         {/* iPhone Screen */}
         <div className="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-gray-800 relative">
-          {/* Carousel Viewport with Framer Motion */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentIndex}
-              className="relative w-[272px] h-[572px]"
-              initial={{ opacity: 0, scale: 0.985, x: 16 }}
-              animate={{ opacity: 1, scale: 1, x: 0 }}
-              exit={{ opacity: 0, scale: 0.985, x: -16 }}
-              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              style={{ willChange: 'transform, opacity' }}
-            >
-              <Image 
-                src={slides[currentIndex].image} 
-                alt={slides[currentIndex].alt} 
-                fill 
-                priority={currentIndex === 0}
-                sizes="(max-width: 768px) 272px, 272px"
-                className="object-cover select-none" 
-                draggable={false}
-              />
-            </motion.div>
-          </AnimatePresence>
+          {/* Carousel Viewport with Smooth Slide Transition */}
+          <div className="relative w-full h-full">
+            <AnimatePresence initial={false} mode="popLayout">
+               <motion.div
+                 key={currentIndex}
+                 className="absolute inset-0 w-full h-full"
+                 initial={{ x: direction > 0 ? '100%' : '-100%' }}
+                 animate={{ x: 0 }}
+                 exit={{ x: direction > 0 ? '-100%' : '100%' }}
+                 transition={{
+                   duration: 0.4,
+                   ease: [0.25, 0.46, 0.45, 0.94]
+                 }}
+                 style={{ willChange: 'transform' }}
+               >
+                <Image 
+                  src={slides[currentIndex].image} 
+                  alt={slides[currentIndex].alt} 
+                  fill 
+                  priority={currentIndex === 0}
+                  sizes="(max-width: 768px) 272px, 272px"
+                  className="object-cover select-none" 
+                  draggable={false}
+                />
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </div>
       </div>
 

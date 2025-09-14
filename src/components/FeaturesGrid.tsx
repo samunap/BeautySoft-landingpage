@@ -24,10 +24,6 @@ const iconMap = {
 
 export default function FeaturesGrid() {
   const { t } = useLanguage()
-  
-  const handleFeatureClick = (feature: string) => {
-    trackEvent('feature_card_clicked', { feature })
-  }
 
   return (
     <section id="features" className="py-20 bg-gradient-to-br from-light to-white">
@@ -54,8 +50,7 @@ export default function FeaturesGrid() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -5, scale: 1.01 }}
-                onClick={() => handleFeatureClick(feature.title)}
-                className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-gray-100"
+                className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
                 {/* Icon */}
                 <div className="w-14 h-14 bg-primary-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary-500 transition-colors">
@@ -70,12 +65,7 @@ export default function FeaturesGrid() {
                   {feature.desc}
                 </p>
 
-                {/* Hover arrow */}
-                <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <span className="text-primary-500 text-sm font-medium">
-                    Learn more →
-                  </span>
-                </div>
+
               </motion.div>
             )
           })}

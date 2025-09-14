@@ -225,9 +225,9 @@ export const translations = {
     footer: {
       description: "La piattaforma completa per barbieri e saloni di bellezza. Gestisci prenotazioni, personale e fai crescere la tua attività con BeautySoft.",
       contact: {
-        email: "hello@beautysoft.app",
+        email: "beautysoftapp@gmail.com",
         phone: "+39 02 1234 5678",
-        address: "Milano, Italia"
+        address: "Cosenza, Italia"
       },
       links: {
         product: "Prodotto",
@@ -242,7 +242,7 @@ export const translations = {
       ],
       companyLinks: [
         { label: "Chi Siamo", href: "#hero" },
-        { label: "Contattaci", href: "mailto:hello@beautysoft.app" },
+        { label: "Contattaci", href: "mailto:beautysoftapp@gmail.com" },
         { label: "Prenota una Demo", href: "#cta" }
       ],
       supportLinks: [
@@ -256,7 +256,7 @@ export const translations = {
         placeholder: "Inserisci la tua email",
         subscribe: "Iscriviti"
       },
-      copyright: "© {year} BeautySoft. Tutti i diritti riservati. • Conforme GDPR • Hosting UE",
+      copyright: "© {year} BeautySoft. Tutti i diritti riservati.",
       languages: {
         italian: "Italiano",
         english: "English"
@@ -265,7 +265,7 @@ export const translations = {
 
     // Logo Wall
     logoWall: {
-      trustedBy: "Fidato dai saloni in crescita in tutta Europa",
+      trustedBy: "Sviluppato con le più recenti tecnologie",
       stats: [
         { label: "Fatturato medio", value: "+28%" },
         { label: "Tasso di Riempimento Agenda", value: "+22%" },
@@ -425,9 +425,9 @@ export const translations = {
         },
         {
           quote: "I finally see who's profitable—and when.",
-          author: "Anna",
+          author: "Dario",
           role: "Salon Owner",
-          location: "Prague"
+          location: "Crotone"
         },
         {
           quote: "Booking takes less than a minute.",
@@ -501,9 +501,9 @@ export const translations = {
     footer: {
       description: "The complete platform for barbers and beauty salons. Manage bookings, staff, and grow your business with BeautySoft.",
       contact: {
-        email: "hello@beautysoft.app",
+        email: "beautysoftapp@gmail.com",
         phone: "+39 02 1234 5678",
-        address: "Milan, Italy"
+        address: "Cosenza, Italy"
       },
       links: {
         product: "Product",
@@ -532,7 +532,7 @@ export const translations = {
         placeholder: "Enter your email",
         subscribe: "Subscribe"
       },
-      copyright: "© {year} BeautySoft. All rights reserved. • GDPR Compliant • EU Hosted",
+      copyright: "© {year} BeautySoft. All rights reserved.",
       languages: {
         italian: "Italiano",
         english: "English"

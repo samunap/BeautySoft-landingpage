@@ -159,35 +159,33 @@ export default function Hero() {
               transition={{ delay: 0.6, duration: 0.6 }}
               className="mt-6"
             >
-              {/* Store badges row (Apple first, same size) */}
+              {/* Store badges row (Apple first, same size) - Temporarily disabled */}
               <div className="flex items-center gap-3">
-                <Link
-                  href="https://apps.apple.com/app/id-REPLACE"
-                  aria-label="Scarica su App Store"
-                  className="inline-flex rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all duration-200 hover:scale-105 hover:shadow-lg"
+                <div
+                  aria-label="Scarica su App Store (Coming Soon)"
+                  className="inline-flex rounded-lg opacity-60 cursor-not-allowed"
                 >
                   <Image
                     src="/download_apple.svg"
-                    alt="Download on the App Store"
+                    alt="Download on the App Store (Coming Soon)"
                     width={180}
                     height={54}
                     priority
                     className="h-[54px] w-[180px] object-contain"
                   />
-                </Link>
-                <Link
-                  href="https://play.google.com/store/apps/details?id=REPLACE"
-                  aria-label="Scarica su Google Play"
-                  className="inline-flex rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all duration-200 hover:scale-105 hover:shadow-lg"
+                </div>
+                <div
+                  aria-label="Scarica su Google Play (Coming Soon)"
+                  className="inline-flex rounded-lg opacity-60 cursor-not-allowed"
                 >
                   <Image
                     src="/download_google.png"
-                    alt="Get it on Google Play"
+                    alt="Get it on Google Play (Coming Soon)"
                     width={180}
                     height={54}
                     className="h-[54px] w-[180px] object-contain"
                   />
-                </Link>
+                </div>
               </div>
 
 

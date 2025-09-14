@@ -1,25 +1,39 @@
-'use client'
+"use client";
 
-import { nav } from '@/content/site'
-import { useLanguage } from '@/lib/language-context'
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react'
+import { nav } from "@/content/site";
+import { useLanguage } from "@/lib/language-context";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
 
 export default function Footer() {
-  const { t, language, setLanguage } = useLanguage()
-  const currentYear = new Date().getFullYear()
+  const { t, language, setLanguage } = useLanguage();
+  const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Twitter, href: 'https://twitter.com/beautysoft', label: 'Twitter' },
-    { icon: Facebook, href: 'https://facebook.com/beautysoft', label: 'Facebook' },
-    { icon: Instagram, href: 'https://instagram.com/beautysoft', label: 'Instagram' },
-    { icon: Linkedin, href: 'https://linkedin.com/company/beautysoft', label: 'LinkedIn' },
-  ]
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/beautysoft25/",
+      label: "Instagram",
+    },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/company/boltsoftt/",
+      label: "LinkedIn",
+    },
+  ];
 
   const footerLinks = {
     [t.footer.links.product]: t.footer.productLinks,
     [t.footer.links.company]: t.footer.companyLinks,
     [t.footer.links.support]: t.footer.supportLinks,
-  }
+  };
 
   return (
     <footer className="bg-dark text-white">
@@ -36,17 +50,14 @@ export default function Footer() {
             <p className="text-gray-400 leading-relaxed mb-6">
               {t.footer.description}
             </p>
-            
+
             {/* Contact Info */}
             <div className="space-y-3 text-sm text-gray-400">
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4" />
                 <span>{t.footer.contact.email}</span>
               </div>
-              <div className="flex items-center gap-3">
-                <Phone className="h-4 w-4" />
-                <span>{t.footer.contact.phone}</span>
-              </div>
+
               <div className="flex items-center gap-3">
                 <MapPin className="h-4 w-4" />
                 <span>{t.footer.contact.address}</span>
@@ -55,39 +66,21 @@ export default function Footer() {
           </div>
 
           {/* Links Columns */}
-          {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
-              <h3 className="font-semibold mb-4">{category}</h3>
-              <ul className="space-y-2">
-                {links.map((link) => (
-                  <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className="text-gray-400 hover:text-white transition-colors text-sm"
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
         </div>
-
 
         {/* Bottom Section */}
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             {/* Copyright */}
             <div className="text-gray-400 text-sm">
-              {t.footer.copyright.replace('{year}', currentYear.toString())}
+              {t.footer.copyright.replace("{year}", currentYear.toString())}
             </div>
 
             {/* Language Selector */}
             <div className="flex items-center gap-4">
-              <select 
+              <select
                 value={language}
-                onChange={(e) => setLanguage(e.target.value as 'it' | 'en')}
+                onChange={(e) => setLanguage(e.target.value as "it" | "en")}
                 className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-primary-500"
               >
                 <option value="it">{t.footer.languages.italian}</option>
@@ -98,7 +91,7 @@ export default function Footer() {
             {/* Social Links */}
             <div className="flex gap-4">
               {socialLinks.map((social) => {
-                const Icon = social.icon
+                const Icon = social.icon;
                 return (
                   <a
                     key={social.label}
@@ -110,12 +103,12 @@ export default function Footer() {
                   >
                     <Icon className="h-4 w-4" />
                   </a>
-                )
+                );
               })}
             </div>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }

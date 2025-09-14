@@ -1,49 +1,50 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import { copy } from '@/content/site'
-import { LanguageProvider } from '@/lib/language-context'
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { copy } from "@/content/site";
+import { LanguageProvider } from "@/lib/language-context";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: copy.meta.title,
   description: copy.meta.description,
-  keywords: 'barber booking, salon management, beauty appointments, staff scheduling, barbershop software',
-  authors: [{ name: 'BeautySoft' }],
-  creator: 'BeautySoft',
-  publisher: 'BeautySoft',
+  keywords:
+    "barber booking, salon management, beauty appointments, staff scheduling, barbershop software",
+  authors: [{ name: "BeautySoft" }],
+  creator: "BeautySoft",
+  publisher: "BeautySoft",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://beautysoft.app'),
+  metadataBase: new URL("https://beautysoft.app"),
   alternates: {
-    canonical: '/',
+    canonical: "/",
   },
   openGraph: {
     title: copy.meta.title,
     description: copy.meta.description,
-    url: 'https://beautysoft.app',
-    siteName: 'BeautySoft',
+    url: "https://beautysoft.app",
+    siteName: "BeautySoft",
     images: [
       {
         url: copy.meta.ogImage,
         width: 1200,
         height: 630,
-        alt: 'BeautySoft - Barber & Salon Management App',
+        alt: "BeautySoft - Barber & Salon Management App",
       },
     ],
-    locale: 'en_US',
-    type: 'website',
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: copy.meta.title,
     description: copy.meta.description,
     images: [copy.meta.ogImage],
-    creator: '@beautysoft',
+    creator: "@beautysoft",
   },
   robots: {
     index: true,
@@ -51,33 +52,40 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   verification: {
-    google: 'google-site-verification-code',
+    google: "google-site-verification-code",
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#6B5BFF" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-        
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=5"
+        />
+
         {/* Analytics Scripts */}
-        {process.env.NODE_ENV === 'production' && (
+        {process.env.NODE_ENV === "production" && (
           <>
             {/* Google Analytics */}
             <script
@@ -94,7 +102,7 @@ export default function RootLayout({
                 `,
               }}
             />
-            
+
             {/* Meta Pixel */}
             <script
               dangerouslySetInnerHTML={{
@@ -116,18 +124,13 @@ export default function RootLayout({
         )}
       </head>
       <body className={inter.className} suppressHydrationWarning={true}>
-        <LanguageProvider>
-          {children}
-        </LanguageProvider>
-        
+        <LanguageProvider>{children}</LanguageProvider>
+
         {/* Vercel Analytics */}
-        {process.env.NODE_ENV === 'production' && (
-          <script
-            defer
-            src="/_vercel/insights/script.js"
-          />
+        {process.env.NODE_ENV === "production" && (
+          <script defer src="/_vercel/insights/script.js" />
         )}
       </body>
     </html>
-  )
+  );
 }

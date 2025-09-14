@@ -25,6 +25,11 @@ export default function RoleTabs() {
 
   const handleCTAClick = (role: string, action: string) => {
     trackEvent('role_cta_clicked', { role, action, position: 'roles' })
+    // Scroll to hero section
+    const heroSection = document.getElementById('hero') || document.querySelector('section')
+    if (heroSection) {
+      heroSection.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   const roleData = {
