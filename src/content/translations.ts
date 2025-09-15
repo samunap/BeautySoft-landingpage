@@ -150,7 +150,7 @@ export const translations = {
         {
           quote: "Finalmente un gestionale che mi mostra subito i ricavi e chi sono i miei clienti migliori",
           author: "Dario", 
-          role: "Proprietaria Salone",
+          role: "Proprietario Salone",
           location: "Crotone"
         },
         {
